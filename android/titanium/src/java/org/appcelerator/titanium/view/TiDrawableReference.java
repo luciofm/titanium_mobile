@@ -597,7 +597,7 @@ public class TiDrawableReference
 				oomOccurred = true;
 				Log.e(LCAT, "Unable to load bitmap. Not enough memory: " + e.getMessage(), e);
 			} finally {
-				if (bTemp != null) {
+				if (bTemp != null && bTemp != b) {
 					bTemp.recycle();
 					bTemp = null;
 				}
